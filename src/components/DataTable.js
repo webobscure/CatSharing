@@ -19,10 +19,10 @@ const DataTable = () => {
 
     useEffect(() => {
         fetch(`https://internship.apps.robotbull.com/cats`)
-        .then((data) => data.json())
-        .then(data => setTableData(data))
-        .then(setTableData(tableData));
-    }, [ ])
+        .then(resp => resp.json())
+        .then(resp => setTableData(resp.items))
+    })
+
 
     return (
         <div style ={{height: 700,width: '100%'}}>
