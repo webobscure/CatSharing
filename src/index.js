@@ -8,11 +8,9 @@ import { DataProvider } from './DataContext';
 
 ReactDOM.render(
   <BrowserRouter>
-    <React.StrictMode>
       <DataProvider>
         <App />
       </DataProvider>
-    </React.StrictMode>
   </BrowserRouter>
   ,
   document.getElementById('root')

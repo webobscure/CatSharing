@@ -1,3 +1,7 @@
 .brand {
   text-align: center;
 }
+
+.date {
+  display: none;
+}

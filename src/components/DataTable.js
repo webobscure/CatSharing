@@ -21,7 +21,7 @@ const DataTable = () => {
         fetch(`https://internship.apps.robotbull.com/cats`)
         .then(resp => resp.json())
         .then(resp => setTableData(resp.items))
-    })
+    },[])
 
 
     return (
