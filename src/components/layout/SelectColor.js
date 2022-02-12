@@ -1,6 +1,7 @@
 import React, { forwardRef, useState } from 'react'
 import {  FormControl, InputLabel, makeStyles} from '@material-ui/core'
 import { Select } from '@material-ui/core'
+import {MenuItem} from '@material-ui/core'
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -9,13 +10,14 @@ const useStyles = makeStyles((theme) => ({
     }
 }))
 
-const SelectColor = forwardRef(({children, props}, ref) => {
+const SelectColor = forwardRef(( props, ref) => {
     const styles = useStyles()
 
     const [color, setColor] = useState('')
 
     const handleChange = (event) => {
         setColor(event.target.value)
+        console.log(event.target.value);
     }
   
 
@@ -30,7 +32,11 @@ const SelectColor = forwardRef(({children, props}, ref) => {
             ref={ref}
             onChange={handleChange}
             {...props}>
-                {children}
+                <MenuItem name ='black' value='black'>Black</MenuItem>
+                    <MenuItem name ='grey' value='grey'>Grey</MenuItem>
+                    <MenuItem name ='dark' value='dark'>Dark</MenuItem>
+                    <MenuItem name ='brown' value='brown'>Brown</MenuItem>
+                    <MenuItem name ='red' value='red'>Red</MenuItem>
                 
             </Select>
         </FormControl>
