@@ -2,8 +2,9 @@ import React, { useState, useEffect } from 'react'
 
 import EditorButton from './layout/EditorButton'
 import DeleteCat from './layout/DeleteCat'
-
+import { Link } from 'react-router-dom';
 import { DataGrid } from '@mui/x-data-grid';
+import { Button } from '@mui/material';
 
 
 
@@ -53,12 +54,17 @@ const DataTable = () => {
 
     return (
         <div style={{ height: 700, width: '100%' }}>
+            
             <DataGrid
                 rows={tableData}
                 columns={columns}
                 style={{marginTop:'20px'}}
             />
-
+            <Link to='cats/create_cat'  >
+                <Button variant='contained' className='btn-add'>
+                Add cat
+                </Button>
+            </Link>
         </div>
     )
 }

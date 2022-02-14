@@ -72,7 +72,7 @@ const CatManage = () => {
                             <option >Scottish</option>
                         </select>
                     </label>
-                    <input type="submit" />
+                    <Button type="submit" >Edit cat </Button>
                 </FormControl>
             </>
     } else {
