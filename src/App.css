@@ -13,3 +13,40 @@
 .back {
   margin-left: 10px !important;
 }
+
+.brand-name {
+    margin: 3px 0 2px;
+    text-align: center;
+    font-size: 35px;
+    color: #051364;
+}
+
+.primary-button {
+  margin: 3px 0 2px;
+}
+
+.select {
+  margin-top: 2px;
+  width: 395px;
+}
+
+.container {
+  margin-top: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form {
+  width: 100%;
+  margin-top: 1px;
+}
+
+.form-control {
+  display: flex !important;
+  align-items: center !important; 
+}
+
+.add {
+  margin-top: 10px;
+}

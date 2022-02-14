@@ -6,11 +6,13 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { DataProvider } from './DataContext';
 
+
+
 ReactDOM.render(
   <BrowserRouter>
-      <DataProvider>
-        <App />
-      </DataProvider>
+    <DataProvider>
+      <App />
+    </DataProvider>
   </BrowserRouter>
   ,
   document.getElementById('root')

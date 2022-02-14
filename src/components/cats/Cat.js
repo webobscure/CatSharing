@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { Container } from '@mui/material';
 import axios from 'axios';
+import DeleteCat from '../layout/DeleteCat';
 
 const Cat = () => {
     const { id } = useParams()
@@ -36,10 +37,10 @@ const Cat = () => {
                         <li className="list-group-item">Age:  {cat.age}</li>
                         <li className="list-group-item">Booked cat:  {cat.isBooked}</li>
                         <li className="list-group-item">Created page of cat: {cat.createdAt} </li>
-                        <li className="list-group-item">Breed cat:</li>
+                        <li className="list-group-item">Breed cat:  </li>
                         <li className="list-group-item">Image of cat: {cat.image} </li>
                         
-
+                        <DeleteCat />
                     </ul>
                     
                 </Container>

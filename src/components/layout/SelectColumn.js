@@ -1,18 +1,11 @@
 import React, { forwardRef, useState } from 'react'
-import { FormControl, InputLabel, makeStyles } from '@material-ui/core'
-import { Select } from '@material-ui/core'
-import { MenuItem } from '@material-ui/core'
+import { FormControl, InputLabel } from '@mui/material'
+
+import { Select } from '@mui/material'
 
 
-const useStyles = makeStyles((theme) => ({
-    root: {
-        marginTop: theme.spacing(2),
-        width: '395px'
-    }
-}))
 
-const SelectColumn = forwardRef((props, ref) => {
-    const styles = useStyles()
+const SelectColumn = forwardRef(({ children, props }, ref) => {
 
     const [column, setColumn] = useState('')
 
@@ -26,17 +19,14 @@ const SelectColumn = forwardRef((props, ref) => {
         <FormControl >
             <InputLabel id="isBookedNow">Breed</InputLabel>
             <Select
-                className={styles.root}
+                className='select'
                 id="isBooked"
                 value={column}
                 ref={ref}
                 onChange={handleChange}
                 {...props}
             >
-                <MenuItem  value='Scottish'>Scottish</MenuItem>
-                <MenuItem  value='British'>British</MenuItem>
-                <MenuItem  value='Egypt'>Egypt</MenuItem>
-
+                {children}
             </Select>
         </FormControl>
     )

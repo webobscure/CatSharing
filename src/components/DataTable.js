@@ -1,22 +1,18 @@
 import React, { useState, useEffect } from 'react'
 
-import Button from '@mui/material/Button';
+import EditorButton from './layout/EditorButton'
 import DeleteCat from './layout/DeleteCat'
 
 import { DataGrid } from '@mui/x-data-grid';
 
 
+
+
+
 const renderDetailsButton = () => {
     return (
         <>
-        <Button
-        variant='contained'
-        color='primary'
-        onClick={() => {
-            console.log('It worked');
-        }}>
-            Edit
-        </Button>
+        <EditorButton />
         <DeleteCat />
         </>
         
@@ -25,7 +21,7 @@ const renderDetailsButton = () => {
 
 const columns = [
     { field: 'id', headerName: 'id' },
-    { field: 'nameCat', headerName: 'nameCat', },
+    { field: 'nameCat', headerName: 'nameCat'},
     { field: 'color', headerName: 'Color ' },
     { field: 'price', headerName: 'price' },
     { field: 'age', headerName: 'age' },
@@ -60,7 +56,7 @@ const DataTable = () => {
             <DataGrid
                 rows={tableData}
                 columns={columns}
-
+                style={{marginTop:'20px'}}
             />
 
         </div>

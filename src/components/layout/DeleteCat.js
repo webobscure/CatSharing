@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
-import {Link} from 'react-router-dom'
+import {useParams} from 'react-router-dom'
 
 import Modal from '@mui/material/Modal';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
+import axios from 'axios';
 
 const style = {
     position: 'absolute',
@@ -22,9 +23,13 @@ const style = {
   };
 
 const DeleteCat = () => {
+    const { id } = useParams()
+    const deleteCatHandle = async (id) => {
+        await axios.delete(`https://internship.apps.robotbull.com/cats/delete_cat/${id}`)
+    }
 
     const [open, setOpen] = useState(false);
-    const handleOpen = () => setOpen(true);
+    const handleOpen = () => {setOpen(true); }
     const handleClose = () => setOpen(false)
 
     return (
@@ -50,7 +55,7 @@ const DeleteCat = () => {
                     <Typography id='modal-modal-description' sx={{ mt: 2 }}>
                         Вы точно уверены, что хотите удалить котика?
                     </Typography>
-                    <Button variant='contained' color='error'>Удалить котика</Button>
+                    <Button variant='contained' color='error' onClick={() => deleteCatHandle(id)}>Удалить котика</Button>
                     <Button variant='outlined' onClick={handleClose} className="back" >
                         Вернуться обратно
                     </Button>
