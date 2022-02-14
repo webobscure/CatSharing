@@ -1,6 +1,15 @@
-# Getting Started with Create React App
+# CatSharing
+Тестовое задание на позицию React Developer
+## Основновными задачами являются:
+- разработать клиентскую часть приложения для сервиса шеринга котиков
+- Разработать форму для добавления/изменения котиков и добавить валидацию для проверки заполнения
+- У пользователя должна быть возможность удалять котиков
+- Пользователь может забронировать или снять бронь с котика
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+Для запуска сайта нужно оввести в консоли: yarn start
+
+Сервер расположен на https://internship.apps.robotbull.com/api/docs
 
 ## Available Scripts
 
